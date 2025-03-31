@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@100;200;400&display=swap');
+
+@font-face {
+    font-family: 'Alumni Sans SC';
+    src: url('/fonts/alumnisans/AlumniSans-Black.ttf') format('truetype'); /* или .woff2 */
+    font-weight: 900;
+    font-style: normal;
+}
+
+.guarantee {
+    position: relative;
+    text-align: center;
+    margin-top: 4px;
+    width: 100%;
+    height: auto;
+    max-width: 2000px; /* Ограничиваем ширину */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.foreground-gif {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.centered-text-block {
+    width: 90%;
+    margin: 0 auto;
+    background-color: #9FBAF1;
+    text-align: center;
+    border-radius: 50px;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 20px;
+    padding-top: 20px;
+}
+
+.centered-text-block h1 {
+    font-family: 'Alumni Sans SC', sans-serif;
+    font-size: 3.5vw; /* Адаптивный размер */
+    font-weight: 900;
+    margin: 0;
+}
+
+.centered-text-block p {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 1.5vw; /* Адаптивный размер */
+    font-weight: 400;
+    padding: 0 5%;
+    margin: 0;
+    padding-bottom: 31px;
+}
+
+/* Медиа-запрос для ширины 430px и меньше */
+@media (max-width: 431px) {
+    .centered-text-block {
+        width: 80%;
+        border-radius: 25px;
+        margin-top: -10px;
+        padding: 15px 20px;
+    }
+
+    .centered-text-block h1 {
+        font-family: 'Unbounded', sans-serif;
+        font-weight: 100; /* Extra Light */
+        color: #1D4594;
+        font-size: 4vw; /* Увеличиваем для лучшей читаемости */
+    }
+
+    .centered-text-block p {
+        display: none; /* Убираем p */
+    }
+}
