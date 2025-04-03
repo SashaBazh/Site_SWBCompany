@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@100;200;400;500;600;700&display=swap');
+
+.services-container {
+    text-align: left;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: -10px;
+}
+
+.services-title {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 5vw;
+    /* Адаптивный размер */
+    font-weight: 700;
+    color: #1D4594;
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+.services-rows {
+    display: flex;
+    flex-direction: column;
+}
+
+.services-scroll {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Скрыть полосу прокрутки для Chrome, Safari и Opera */
+.services-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+/* Скрыть полосу прокрутки для IE, Edge и Firefox */
+.services-scroll {
+    -ms-overflow-style: none;
+    /* IE и Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+/* При обычном отображении (ширина экрана >= 800px) */
+@media (min-width: 801px) {
+    .services-rows {
+        display: block;
+        /* Отменяем колоночное расположение */
+    }
+
+    .services-rows .services-scroll:nth-child(2) {
+        display: none;
+        /* Скрываем второй ряд */
+    }
+
+    .services-rows .services-scroll:first-child {
+        /* Отображаем все карточки в одном ряду */
+        width: 100%;
+    }
+}
+
+/* Медиа-запрос для ширины экрана менее 800px */
+@media (max-width: 800px) {
+    .services-scroll {
+        width: 100%;
+    }
+}

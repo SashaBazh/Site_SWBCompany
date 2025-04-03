@@ -98,7 +98,7 @@
 
 @media (max-width: 600px) {
   .advantages-container {
-    padding: 3vh 16px;
+    width: 88%;
   }
 
   .advantages-list {

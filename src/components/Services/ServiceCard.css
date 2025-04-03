@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;700&display=swap');
+
+
+@font-face {
+    font-family: 'Franklin Gothic Heavy';
+    src: url('/fonts/Franklin/ofont.ru_Franklin Gothic Heavy.ttf') format('truetype');
+    /* или .woff2 */
+    font-weight: 900;
+    font-style: normal;
+}
+
+.service-card {
+    position: relative;
+    width: 27vw;
+    /* Динамическая ширина */
+    max-width: 546px;
+    min-width: 180px;
+    height: auto;
+    aspect-ratio: 3 / 4.5;
+    /* Поддержка пропорций */
+    border-radius: 6vw;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    margin: 1vw;
+    flex: 0 0 auto;
+    border: 2px solid #1D4594;
+    padding: 2vw 3.4vw;
+    padding-bottom: 6vw;
+    background: url('/assets/images/card-bg.png') center/cover no-repeat;
+}
+
+.service-card-content {
+    position: relative;
+    height: 100%;
+    padding: 3vw 0vw;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+}
+
+.service-card-title {
+    font-size: 3.4vw;
+    font-weight: bold;
+    color: #1D4594;
+    text-align: left;
+    margin-bottom: 3vw;
+    font-family: 'Franklin Gothic Heavy', sans-serif;
+    font-weight: 900;
+    line-height: 1;
+    margin-top: 1.7vw;
+}
+
+.service-card-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-grow: 1;
+}
+
+.service-card-list li {
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1.3vw;
+    color: #1D4594;
+    font-size: 1.24vw;
+    font-weight: 500;
+}
+
+.service-list-icon {
+    margin-right: 10px;
+    flex-shrink: 0;
+    margin-top: 8px;
+}
+
+.service-card-price-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-bottom: 2vw;
+    /* Поднятие цены выше списка */
+}
+
+.service-card-price {
+    color: #1D4594;
+}
+
+.price-prefix {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 4vw;
+}
+
+.price-value {
+    font-family: 'Staatliches', sans-serif;
+    /* Применяем шрифт */
+    font-weight: 500;
+    font-size: 4vw;
+    margin-left: 8px;
+
+}
+
+.service-card-time {
+    color: #1D4594;
+    margin-top: -1vw;
+}
+
+.days-range {
+    font-family: 'Staatliches', sans-serif;
+    /* Применяем шрифт */
+    font-size: 3.3vw;
+    font-weight: 500;
+}
+
+.days-text {
+    font-family: "Montserrat Alternates", sans-serif;
+    font-size: 3.3vw;
+    font-weight: 700;
+    margin-left: 8px;
+}
+
+
+/* Адаптивность */
+@media (max-width: 1024px) {
+    .service-card {
+        width: 40vw;
+        padding: 4vw;
+    }
+
+    .service-card-title {
+        font-size: 4vw;
+    }
+
+    .service-card-list li {
+        font-size: 2vw;
+    }
+
+    .service-card-price {
+        font-size: 4vw;
+    }
+
+    .service-card-time {
+        font-size: 3vw;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .service-card {
+        aspect-ratio: 3 / 4;
+    }
+
+    .service-list-icon {
+        margin-right: 10px;
+        flex-shrink: 0;
+        margin-top: 3px;
+        width: 5px;
+        height: 5px;
+    }
+}
