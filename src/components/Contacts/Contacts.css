@@ -1,0 +1,157 @@
+.contacts-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  padding: 20px 40px;
+  border-radius: 10px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.contacts-info {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  flex: 0 0 40%;
+  /* Контакты занимают 40% */
+}
+
+.contacts-title {
+  font-family: 'Unbounded', sans-serif;
+  font-size: 5vw;
+  font-weight: 700;
+  color: #1D4594;
+  margin: 0 5vw;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+.contact-item {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 3vw;
+  color: #1D4594;
+}
+
+.contact-icon {
+  width: 7vw;
+  height: 7vw;
+  filter: invert(17%) sepia(84%) saturate(1615%) hue-rotate(201deg) brightness(89%) contrast(92%);
+}
+
+.contact-icon2 {
+  width: 6vw;
+  height: 6vw;
+}
+
+.contacts-image {
+  flex: 0 0 50%;
+  /* Ковёр занимает 60% */
+  display: flex;
+  justify-content: center;
+}
+
+.contact-bg {
+  width: 100%;
+  /* Растягиваем картинку на 60% контейнера */
+  max-width: 100%;
+  border-radius: 5px;
+}
+
+@media (max-width: 600px) {
+  .contacts-container {
+    flex-direction: column;
+    width: 90%;
+    padding: 0;
+    border-radius: 0;
+    overflow: hidden;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .contacts-image {
+    flex: 1;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+  }
+
+  .contact-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .contacts-info {
+    position: absolute;
+    top: 8.5%;
+    left: 42%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 80%;
+    max-width: 500px;
+    z-index: 10;
+    background: transparent;
+    padding: 0;
+  }
+
+  /* Создаем обертку для каждого элемента контакта */
+  .contact-item {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 3.6vw;
+    color: white;
+    position: relative;
+    padding: 13px 40px 13px 10px;
+    border-radius: 30px;
+    width: auto;
+    height: 5vw;
+    display: flex;
+    align-items: center;
+    align-self: flex-start;
+    /* Убираем backdrop-filter отсюда */
+    background: none;
+  }
+
+  /* Создаем псевдоэлемент для размытого фона */
+  .contact-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(#1D4594, 0.5);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    border-radius: 30px;
+    z-index: -1;
+  }
+
+  .contact-item span {
+    position: relative;
+    z-index: 10;
+  }
+
+  .contact-icon {
+    position: relative;
+    z-index: 10;
+    width: 9vw;
+    height: 9vw;
+    filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+  }
+
+  .contact-icon2 {
+    position: relative;
+    z-index: 10;
+    width: 7vw;
+    height: 7vw;
+    filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+  }
+
+}

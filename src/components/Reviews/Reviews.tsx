@@ -55,7 +55,7 @@ const Reviews = () => {
 
       {/* Правая часть с заголовком и фоном */}
       <div className="reviews-summary">
-        <img src="/assets/images/aura.png" alt="Background" className="summary-bg" />
+        <img src="/assets/images/aura.gif" alt="Background" className="summary-bg" />
         <h2>ВСЕ НАШИ КЛИЕНТЫ ОТМЕЧАЮТ РОСТ ПРОДАЖ, ПОСЛЕ ЗАПУСКА ПРОЕКТОВ.</h2>
         <p>Мы не просто создаем сайты — мы создаем инструменты, которые работают на ваш бизнес.</p>
       </div>

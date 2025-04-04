@@ -64,7 +64,7 @@
   }
   
   .review-logo {
-    width: 8vh;
+    width: 11vh;
     height: 5vw;
   }
   
@@ -87,7 +87,6 @@
   /* Правая часть - картинка, заголовок, описание */
   .reviews-summary {
     width: 35%;
-    background: #e8f0ff;
     border-radius: 50px;
     padding: 20px;
     text-align: left;
@@ -101,10 +100,12 @@
   
   .summary-bg {
     position: absolute;
-    top: 0;
+    top: -4vw;
     left: 50%;
     transform: translateX(-50%);
     width: 40%;
+    width: 30vw;
+    height: auto;
   }
 
   
@@ -211,9 +212,15 @@
       margin-bottom: 0;
     }
 
+    .reviews-summary {
+      background: url('/assets/images/card-bg2.png');
+    }
+
     .summary-bg {
         position: absolute;
-        top: -90px;
+        width: 60vw;
+        height: auto;
+        top: -20vw;
       }
   }
 
@@ -227,6 +234,8 @@
         width: 3vh;
         height: 5vw;
       }
+
+
   }
 
   @media (max-width: 450px) {
