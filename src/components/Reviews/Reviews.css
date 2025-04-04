@@ -1,0 +1,250 @@
+@font-face {
+    font-family: "Marvin Visions Regular";
+    src: url("https://db.onlinewebfonts.com/t/9412ca170307a5a1dbb32318c8adb0c1.eot");
+    src: url("https://db.onlinewebfonts.com/t/9412ca170307a5a1dbb32318c8adb0c1.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/9412ca170307a5a1dbb32318c8adb0c1.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/9412ca170307a5a1dbb32318c8adb0c1.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/9412ca170307a5a1dbb32318c8adb0c1.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/9412ca170307a5a1dbb32318c8adb0c1.svg#Marvin Visions Regular")format("svg");
+}
+
+
+.reviews-titleh2 {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 5vw;
+    font-weight: 700;
+    color: #1D4594;
+    margin: 0 5vw;
+    margin-bottom: 30px;
+    margin-top: 30px;
+  }
+  
+  .reviews-container {
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+    gap: 20px;
+    height: 50vw;
+  }
+  
+  /* Левая часть - отзывы */
+  .reviews-box {
+    width: 65%;
+    border-radius: 50px;
+    padding: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #1D4594;
+  }
+  
+  .reviews-list {
+    max-height: 49vw;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    border-radius: 30px;
+  }
+  
+  .review {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 30px;
+    background: #F3F3F3;
+    border-radius: 30px;
+  }
+  
+  /* Логотип и заголовок в одну строку */
+  .review-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .review-logo {
+    width: 8vh;
+    height: 5vw;
+  }
+  
+  .review-title {
+    font-size: 4vw;
+    font-weight: bold;
+    color: #1D4594;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+  }
+  
+  .review-text {
+    font-family: 'Unbounded', sans-serif;
+    font-weight: 400;
+    font-size: 1.62vw;
+    color: #000000;
+    margin: 0;
+  }
+  
+  /* Правая часть - картинка, заголовок, описание */
+  .reviews-summary {
+    width: 35%;
+    background: #e8f0ff;
+    border-radius: 50px;
+    padding: 20px;
+    text-align: left;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: url('/assets/images/card-bg.png');
+    border: 1px solid #1D4594;
+  }
+  
+  .summary-bg {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40%;
+  }
+
+  
+  .reviews-summary h2 {
+    font-family: "Marvin Visions Regular", sans-serif;
+    font-size: 3.45vw;
+    font-weight: 500;
+    color: #003ea1;
+    margin-top: 50%;
+
+  }
+  
+  .reviews-summary p {
+    font-family: "Montserrat Alternates", sans-serif;
+    font-size: 2vw;
+    color: #000000;
+    margin-top: 10px;
+  }
+  
+  /* Адаптивность */
+  @media (max-width: 1400px) {
+    .review-logo {
+        width: 6vh;
+        height: 5vw;
+      }
+  }
+
+  @media (max-width: 1000px) {
+    .review-logo {
+        width: 5vh;
+        height: 5vw;
+      }
+
+      .reviews-summary h2 {
+        font-size: 3vw;
+    
+      }
+      
+      .reviews-summary p {
+        font-size: 1.8vw;
+      }
+  }
+  
+  @media (max-width: 700px) {
+    .review-logo {
+        width: 3vh;
+        height: 5vw;
+      }
+
+      .reviews-summary h2 {
+        font-size: 2.8vw;
+    
+      }
+      
+      .reviews-summary p {
+        font-size: 1.7vw;
+      }
+  }
+
+  @media (max-width: 600px) {
+    .reviews-container {
+      flex-direction: column;
+      height: auto; /* Убираем фиксированную высоту */
+    }
+  
+    .reviews-box,
+    .reviews-summary {
+      width: 90%;
+      border-radius: 30px;
+    }
+
+    .reviews-box {
+      height: 70vw;
+    }
+
+    .reviews-list {
+        max-height: 70vw;
+        border-radius: 20px;
+        
+      }
+
+      .review {
+        padding: 15px;
+        border-radius: 20px;
+      }
+
+      .review-logo {
+        width: 4vh;
+        height: 5vw;
+      }
+
+      .review-text {
+        font-size: 2vw;
+      }
+  
+    .reviews-summary h2 {
+      font-size: 4vw;
+      margin-top: 80px;
+      margin-bottom: -10px;
+    }
+  
+    .reviews-summary p {
+      font-size: 2.8vw;
+      margin-bottom: 0;
+    }
+
+    .summary-bg {
+        position: absolute;
+        top: -90px;
+      }
+  }
+
+  @media (max-width: 500px) {
+    .summary-bg {
+        position: absolute;
+        top: -80px;
+      }
+
+      .review-logo {
+        width: 3vh;
+        height: 5vw;
+      }
+  }
+
+  @media (max-width: 450px) {
+    .summary-bg {
+        position: absolute;
+        top: -60px;
+      }
+
+      .review-logo {
+        width: 2.5vh;
+        height: 5vw;
+      }
+  }
+
+  @media (max-width: 400px) {
+    .summary-bg {
+        position: absolute;
+        top: -40px;
+      }
+  }
+  

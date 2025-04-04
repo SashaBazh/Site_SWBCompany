@@ -4,6 +4,7 @@ import WhyUs from "../components/WhyUs/Whyus";
 import Advantages from "../components/Advantages/Advantages";
 import Services from "../components/Services/Services";
 import ProjectsPortfolio from "../components/ProjectsPortfolio/ProjectsPortfolio";
+import Reviews from "../components/Reviews/Reviews";
 
 export const SwbLending = () => {
   return (
@@ -14,6 +15,7 @@ export const SwbLending = () => {
       <Advantages />
       <Services />
       <ProjectsPortfolio />
+      <Reviews />
     </>
   );
 };

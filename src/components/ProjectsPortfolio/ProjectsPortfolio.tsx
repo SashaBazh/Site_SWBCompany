@@ -56,9 +56,9 @@ const ProjectsPortfolio: React.FC = () => {
             </div>
           ))}
         </div>
-        {/* <div className="more-projects-box">
+        <div className="more-projects-box">
           <h3>ещё больше работ</h3>
-        </div> */}
+        </div>
       </div>
     </>
   );
