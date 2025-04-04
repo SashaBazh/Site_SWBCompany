@@ -3,6 +3,7 @@ import Header from "../components/Header/Header";
 import WhyUs from "../components/WhyUs/Whyus";
 import Advantages from "../components/Advantages/Advantages";
 import Services from "../components/Services/Services";
+import ProjectsPortfolio from "../components/ProjectsPortfolio/ProjectsPortfolio";
 
 export const SwbLending = () => {
   return (
@@ -12,6 +13,7 @@ export const SwbLending = () => {
       <WhyUs />
       <Advantages />
       <Services />
+      <ProjectsPortfolio />
     </>
   );
 };
