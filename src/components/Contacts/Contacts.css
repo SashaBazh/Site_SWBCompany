@@ -77,6 +77,7 @@
     width: 100vw; /* на всю ширину экрана */
     height: 60vw; /* можно поменять под нужную пропорцию */
     position: relative;
+    margin-bottom: 15px;
   }
 
   .contact-bg {
