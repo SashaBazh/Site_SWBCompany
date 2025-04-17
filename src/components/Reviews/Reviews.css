@@ -126,6 +126,20 @@
   }
   
   /* Адаптивность */
+  @media (max-width: 1750px) {
+    .review-logo {
+        width: 8vh;
+        height: 5vw;
+      }
+  }
+
+  @media (max-width: 1500px) {
+    .review-logo {
+        width: 7vh;
+        height: 5vw;
+      }
+  }
+
   @media (max-width: 1400px) {
     .review-logo {
         width: 6vh;

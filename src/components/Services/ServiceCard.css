@@ -2,11 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;500;600;700&display=swap');
 
-
 @font-face {
     font-family: 'Franklin Gothic Heavy';
     src: url('/fonts/Franklin/ofont.ru_Franklin Gothic Heavy.ttf') format('truetype');
-    /* или .woff2 */
     font-weight: 900;
     font-style: normal;
 }
@@ -14,12 +12,10 @@
 .service-card {
     position: relative;
     width: 27vw;
-    /* Динамическая ширина */
     max-width: 546px;
     min-width: 180px;
     height: auto;
     aspect-ratio: 3 / 4.5;
-    /* Поддержка пропорций */
     border-radius: 6vw;
     overflow: hidden;
     background-size: cover;
@@ -48,7 +44,6 @@
     text-align: left;
     margin-bottom: 3vw;
     font-family: 'Franklin Gothic Heavy', sans-serif;
-    font-weight: 900;
     line-height: 1;
     margin-top: 1.7vw;
 }
@@ -81,7 +76,6 @@
     flex-direction: column;
     align-items: flex-end;
     margin-bottom: 2vw;
-    /* Поднятие цены выше списка */
 }
 
 .service-card-price {
@@ -96,11 +90,9 @@
 
 .price-value {
     font-family: 'Staatliches', sans-serif;
-    /* Применяем шрифт */
     font-weight: 500;
     font-size: 4vw;
     margin-left: 8px;
-
 }
 
 .service-card-time {
@@ -110,7 +102,6 @@
 
 .days-range {
     font-family: 'Staatliches', sans-serif;
-    /* Применяем шрифт */
     font-size: 3.3vw;
     font-weight: 500;
 }
@@ -122,42 +113,7 @@
     margin-left: 8px;
 }
 
-
 /* Адаптивность */
-@media (max-width: 1024px) {
-    .service-card {
-        width: 40vw;
-        padding: 4vw;
-    }
+@media (max-width: 1024px) { .service-card { width: 40vw; padding: 4vw; } .service-card-title { font-size: 4vw; } .service-card-list li { font-size: 2vw; } .service-card-price { font-size: 4vw; } .service-card-time { font-size: 3vw; } }
 
-    .service-card-title {
-        font-size: 4vw;
-    }
-
-    .service-card-list li {
-        font-size: 2vw;
-    }
-
-    .service-card-price {
-        font-size: 4vw;
-    }
-
-    .service-card-time {
-        font-size: 3vw;
-    }
-}
-
-@media (max-width: 500px) {
-
-    .service-card {
-        aspect-ratio: 3 / 4;
-    }
-
-    .service-list-icon {
-        margin-right: 10px;
-        flex-shrink: 0;
-        margin-top: 3px;
-        width: 5px;
-        height: 5px;
-    }
-}
+@media (max-width: 500px) { .service-card { aspect-ratio: 3 / 4; } .service-list-icon { margin-right: 10px; flex-shrink: 0; margin-top: 3px; width: 5px; height: 5px; } }

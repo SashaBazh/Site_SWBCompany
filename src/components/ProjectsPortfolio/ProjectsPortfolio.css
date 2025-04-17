@@ -1,3 +1,13 @@
+.portfolio-titleh2 {
+  font-family: 'Unbounded', sans-serif;
+  font-size: 5vw;
+  font-weight: 700;
+  color: #1D4594;
+  margin: 0 5vw;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
 .portfolio-wrapper {
   display: flex;
   width: 90%;
@@ -13,36 +23,6 @@
   width: 80%;
 }
 
-.more-projects-box {
-  width: 24%;
-  min-height: 100%; /* Убедимся, что блок не схлопывается */
-  background: url("/assets/images/purple.png") center/cover no-repeat;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 3vw;
-  font-size: 2vw;
-  font-weight: bold;
-  text-align: center;
-  align-self: stretch;
-  border: 1px solid #033EB4;
-  /* Динамическая ширина и пропорции */
-  aspect-ratio: 3 / 4.5; /* Поддержка пропорций */
-  min-width: 100px; /* Минимальная ширина */
-  max-width: 576px; /* Максимальная ширина */
-  flex: 0 0 auto; /* Запрещает сжатие и растяжение */
-}
-
-
-.more-projects-box h3 {
-  font-family: 'Unbounded', sans-serif;
-  font-size: 3.5vw;
-  transform: rotate(180deg);
-  writing-mode: vertical-rl; /* Вертикальный текст */
-  text-orientation: mixed;
-}
-
 .portfolio-box {
   background-color: #f8f9fd;
   border-radius: 3vw;
@@ -50,24 +30,14 @@
   display: flex;
   position: relative;
   min-height: 50px;
-  height: auto; /* Высота будет адаптироваться в зависимости от контента */
-  width: 30vw; /* Динамическая ширина */
-  max-width: 600px; /* Максимальная ширина */
-  min-width: 100px; /* Минимальная ширина */
-  aspect-ratio: 3 / 2.2; /* Поддержка пропорций (ширина к высоте) */
+  height: auto;
+  width: 30vw;
+  max-width: 600px;
+  min-width: 100px;
+  aspect-ratio: 3 / 2.2;
   border: 1px solid #033EB4;
-  flex-direction: row; /* Элементы внутри располагаются в строку */
-  flex: 0 0 auto; /* Запрещает сжатие и растяжение */
-}
-
-.portfolio-titleh2 {
-  font-family: 'Unbounded', sans-serif;
-  font-size: 5vw;
-  font-weight: 700;
-  color: #1D4594;
-  margin: 0 5vw;
-  margin-bottom: 30px;
-  margin-top: 30px;
+  flex-direction: row;
+  flex: 0 0 auto;
 }
 
 .portfolio-content {
@@ -75,7 +45,7 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  width: 60%; /* Текст занимает 60% ширины блока */
+  width: 60%;
 }
 
 .portfolio-title {
@@ -91,7 +61,7 @@
   color: #33529f;
   font-size: 1.8vw;
   margin: 0;
-  max-width: 15vw; /* Убираем ограничения по ширине для текста */
+  max-width: 15vw;
 }
 
 .portfolio-image-container {
@@ -100,18 +70,17 @@
   top: 0;
   width: 100%;
   height: 100%;
-  z-index: 30; /* Чтобы картинка была за контентом */
-  overflow: visible; /* Разрешаем картинке выходить за пределы блока */
+  z-index: 30;
+  overflow: visible;
 }
 
 .portfolio-image {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Заменяем contain на cover, чтобы картинка заполнила контейнер */
-  position: absolute; /* Позиционируем картинку относительно контейнера */
+  object-fit: cover;
+  position: absolute;
 }
 
-/* Стили для изображений с ноутбуком */
 .portfolio-image-container.laptop {
   top: 180px;
   left: 300px;
@@ -120,23 +89,47 @@
 }
 
 .portfolio-image-container.phone {
-  top: -50px; /* Позиционируем картинку для телефона */
+  top: -50px;
   left: 290px;
   width: 340px;
   height: 485px;
 }
 
-/* Базовые стили выше остаются без изменений */
+.more-projects-box {
+  width: 24%;
+  min-height: 100%;
+  background: url("/assets/images/purple.png") center/cover no-repeat;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3vw;
+  font-size: 2vw;
+  font-weight: bold;
+  text-align: center;
+  align-self: stretch;
+  border: 1px solid #033EB4;
+  aspect-ratio: 3 / 4.5;
+  min-width: 100px;
+  max-width: 576px;
+  flex: 0 0 auto;
+}
+
+.more-projects-box h3 {
+  font-family: 'Unbounded', sans-serif;
+  font-size: 3.5vw;
+  transform: rotate(180deg);
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+}
 
 @media (max-width: 1750px) {
   .portfolio-box { width: 30vw; }
   .portfolio-title { font-size: 2.6vw; }
-  .portfolio-description { font-size: 1.6vw; width: 1px;}
+  .portfolio-description { font-size: 1.6vw; width: 1px; }
   .portfolio-image-container.laptop { top: 170px; left: 270px; width: 370px; height: 280px; }
   .portfolio-image-container.phone { left: 250px; width: 320px; height: 460px; }
-  .more-projects-box {
-    width: 20%;
-  }
+  .more-projects-box { width: 20%; }
 }
 
 @media (max-width: 1650px) {
@@ -150,13 +143,13 @@
 @media (max-width: 1550px) {
   .portfolio-box { width: 30vw; }
   .portfolio-title { font-size: 2.4vw; }
-  .portfolio-description { font-size: 1.4vw; width: 200px;}
+  .portfolio-description { font-size: 1.4vw; width: 200px; }
   .portfolio-image-container.laptop { left: 230px; width: 320px; height: 240px; }
   .portfolio-image-container.phone { left: 230px; width: 280px; height: 420px; }
 }
 
 @media (max-width: 1450px) {
-  .portfolio-box { width: 30vw; height: 20vw;}
+  .portfolio-box { width: 30vw; height: 20vw; }
   .portfolio-title { font-size: 2.4vw; }
   .portfolio-description { font-size: 1.4vw; }
   .portfolio-image-container.laptop { top: 130px; left: 250px; width: 300px; height: 220px; }
@@ -172,18 +165,16 @@
 }
 
 @media (max-width: 1250px) {
-  .portfolio-box { width: 28vw; height: 16vw;}
+  .portfolio-box { width: 28vw; height: 16vw; }
   .portfolio-title { font-size: 2.4vw; }
   .portfolio-description { font-size: 1.4vw; }
   .portfolio-image-container.laptop { top: 90px; left: 180px; width: 220px; height: 160px; }
   .portfolio-image-container.phone { left: 180px; width: 180px; height: 310px; }
-  .more-projects-box h3 {
-    font-size: 3vw;
-  }
+  .more-projects-box h3 { font-size: 3vw; }
 }
 
 @media (max-width: 1150px) {
-  .portfolio-box { width: 28vw; height: 16vw;}
+  .portfolio-box { width: 28vw; height: 16vw; }
   .portfolio-title { font-size: 2.4vw; }
   .portfolio-description { font-size: 1.4vw; }
   .portfolio-image-container.laptop { top: 90px; left: 180px; width: 220px; height: 160px; }
@@ -191,8 +182,7 @@
 }
 
 @media (max-width: 1050px) {
-  .portfolio-box { padding: 0px 24px; }
-  .portfolio-box { width: 26vw; height: 20vw;}
+  .portfolio-box { padding: 0px 24px; width: 26vw; height: 20vw; }
   .portfolio-title { font-size: 2.4vw; }
   .portfolio-description { font-size: 1.4vw; }
   .portfolio-image-container.laptop { top: 60px; left: 150px; width: 190px; height: 130px; }
@@ -200,8 +190,7 @@
 }
 
 @media (max-width: 950px) {
-  .portfolio-box { padding: 0px 24px; }
-  .portfolio-box { width: 26vw; height: 20vw;}
+  .portfolio-box { padding: 0px 24px; width: 26vw; height: 20vw; }
   .portfolio-title { font-size: 2.4vw; }
   .portfolio-description { font-size: 1.4vw; }
   .portfolio-image-container.laptop { top: 60px; left: 150px; width: 190px; height: 130px; }
@@ -209,8 +198,7 @@
 }
 
 @media (max-width: 850px) {
-  .portfolio-box { padding: 0px 24px; }
-  .portfolio-box { width: 26vw; height: 20vw;}
+  .portfolio-box { padding: 0px 24px; width: 26vw; height: 20vw; }
   .portfolio-title { font-size: 2.4vw; }
   .portfolio-description { font-size: 1.4vw; }
   .portfolio-image-container.laptop { top: 50px; left: 120px; width: 170px; height: 110px; }
@@ -218,9 +206,8 @@
 }
 
 @media (max-width: 750px) {
-  .portfolio-container { gap: 10px;}
-  .portfolio-box { padding: 0px 24px; }
-  .portfolio-box { width: 24vw; height: 20vw;}
+  .portfolio-container { gap: 10px; }
+  .portfolio-box { padding: 0px 24px; width: 24vw; height: 20vw; }
   .portfolio-title { font-size: 2.4vw; }
   .portfolio-description { font-size: 1.4vw; }
   .portfolio-image-container.laptop { top: 50px; left: 110px; width: 150px; height: 100px; }
@@ -228,9 +215,8 @@
 }
 
 @media (max-width: 650px) {
-  .portfolio-container { gap: 10px;}
-  .portfolio-box { padding: 0px 24px; }
-  .portfolio-box { width: 24vw; height: 20vw;}
+  .portfolio-container { gap: 10px; }
+  .portfolio-box { padding: 0px 24px; width: 24vw; height: 20vw; }
   .portfolio-title { font-size: 2.4vw; }
   .portfolio-description { font-size: 1.8vw; }
   .portfolio-image-container.laptop { top: 50px; left: 110px; width: 110px; height: 80px; }
@@ -238,153 +224,56 @@
 }
 
 @media (max-width: 550px) {
-  .portfolio-box {
-    flex-direction: column;
-    align-items: flex-start;
-    width: 40%;
-    height: 45vw;
-    padding: 0px 20px;
-    position: relative;
-    aspect-ratio: auto;
-    border-radius: 5vw;
-  }
-
-  .portfolio-content {
-    width: 100%;
-    margin-top: 180px;
-  }
-
-  .portfolio-title { font-size: 3.5vw; margin: 0;}
+  .portfolio-box { flex-direction: column; align-items: flex-start; width: 40%; height: 45vw; padding: 0px 20px; position: relative; aspect-ratio: auto; border-radius: 5vw; }
+  .portfolio-content { width: 100%; margin-top: 180px; }
+  .portfolio-title { font-size: 3.5vw; margin: 0; }
   .portfolio-description { font-size: 2.5vw; max-width: 200px !important; }
-
   .portfolio-image-container.laptop { top: 20px; left: 20px; width: 200px; height: 160px; }
   .portfolio-image-container.phone { top: -60px; left: 50px; width: 150px; height: 270px; }
-
-  .portfolio-wrapper {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .portfolio-container {
-    width: 100%;
-  }
-
-  .more-projects-box {
-    width: 100%;
-    max-width: none;
-    margin-top: 20px;
-    border-radius: 5vw;
-  }
-
-  .more-projects-box h3 {
-    transform: none;
-    writing-mode: horizontal-tb;
-    font-size: 5vw;
-  }
-
-  .more-projects-box {
-    height: 100px;
-  }
-
-
+  .portfolio-wrapper { flex-direction: column; align-items: center; }
+  .portfolio-container { width: 100%; }
+  .more-projects-box { width: 100%; max-width: none; margin-top: 20px; border-radius: 5vw; height: 100px; }
+  .more-projects-box h3 { transform: none; writing-mode: horizontal-tb; font-size: 5vw; }
 }
 
 @media (max-width: 530px) {
-  .portfolio-box {
-    flex-direction: column;
-    align-items: flex-start;
-    width: 39%;
-    height: 45vw;
-    padding: 0px 20px;
-    position: relative;
-    aspect-ratio: auto;
-  }
-
-  .portfolio-content {
-    width: 100%;
-    margin-top: 170px;
-  }
-
-  .portfolio-title { font-size: 3.5vw; margin: 0;}
+  .portfolio-box { flex-direction: column; align-items: flex-start; width: 39%; height: 45vw; padding: 0px 20px; position: relative; aspect-ratio: auto; }
+  .portfolio-content { width: 100%; margin-top: 170px; }
+  .portfolio-title { font-size: 3.5vw; margin: 0; }
   .portfolio-description { font-size: 2.5vw; max-width: 180px !important; }
-
   .portfolio-image-container.laptop { top: 20px; left: 20px; width: 180px; height: 140px; }
   .portfolio-image-container.phone { top: -60px; left: 50px; width: 130px; height: 250px; }
-
-  .more-projects-box {
-    height: 80px;
-  }
+  .more-projects-box { height: 80px; }
 }
 
 @media (max-width: 480px) {
-  .portfolio-box {
-    flex-direction: column;
-    align-items: flex-start;
-    width: 38%;
-    height: 45vw;
-    padding: 0px 20px;
-    position: relative;
-    aspect-ratio: auto;
-  }
+  .portfolio-box { flex-direction: column; align-items: flex-start; }
+}
 
-  .portfolio-content {
-    width: 100%;
-    margin-top: 150px;
-  }
-
-  .portfolio-title { font-size: 3.5vw; margin: 0;}
+@media (max-width: 480px) {
+  .portfolio-box { width: 38%; height: 45vw; padding: 0px 20px; position: relative; aspect-ratio: auto; }
+  .portfolio-content { width: 100%; margin-top: 150px; }
+  .portfolio-title { font-size: 3.5vw; margin: 0; }
   .portfolio-description { font-size: 2.5vw; max-width: 180px !important; }
-
   .portfolio-image-container.laptop { top: 20px; left: 20px; width: 170px; height: 130px; }
   .portfolio-image-container.phone { top: -60px; left: 50px; width: 120px; height: 240px; }
-
-  .more-projects-box {
-    height: 70px;
-  }
+  .more-projects-box { height: 70px; }
 }
 
 @media (max-width: 440px) {
-  .portfolio-box {
-    flex-direction: column;
-    align-items: flex-start;
-    width: 37%;
-    height: 45vw;
-    padding: 0px 20px;
-    position: relative;
-    aspect-ratio: auto;
-  }
-
-  .portfolio-content {
-    width: 100%;
-    margin-top: 140px;
-  }
-
-  .portfolio-title { font-size: 3.5vw; margin: 0;}
+  .portfolio-box { flex-direction: column; align-items: flex-start; width: 37%; height: 45vw; padding: 0px 20px; position: relative; aspect-ratio: auto; }
+  .portfolio-content { width: 100%; margin-top: 140px; }
+  .portfolio-title { font-size: 3.5vw; margin: 0; }
   .portfolio-description { font-size: 2.5vw; max-width: 180px !important; }
-
   .portfolio-image-container.laptop { top: 20px; left: 12px; width: 160px; height: 120px; }
   .portfolio-image-container.phone { top: -60px; left: 40px; width: 110px; height: 230px; }
 }
 
 @media (max-width: 400px) {
-  .portfolio-box {
-    flex-direction: column;
-    align-items: flex-start;
-    width: 35%;
-    height: 40vw;
-    padding: 0px 20px;
-    position: relative;
-    aspect-ratio: auto;
-  }
-
-  .portfolio-content {
-    width: 100%;
-    margin-top: 110px;
-  }
-
-  .portfolio-title { font-size: 3.5vw; margin: 0;}
+  .portfolio-box { flex-direction: column; align-items: flex-start; width: 35%; height: 40vw; padding: 0px 20px; position: relative; aspect-ratio: auto; }
+  .portfolio-content { width: 100%; margin-top: 110px; }
+  .portfolio-title { font-size: 3.5vw; margin: 0; }
   .portfolio-description { font-size: 2.5vw; max-width: 160px !important; }
-
   .portfolio-image-container.laptop { top: 10px; left: 12px; width: 140px; height: 100px; }
   .portfolio-image-container.phone { top: -50px; left: 40px; width: 100px; height: 180px; }
 }

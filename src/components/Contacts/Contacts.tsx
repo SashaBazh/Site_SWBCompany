@@ -28,7 +28,7 @@ const Contacts = () => {
               alt="Phone"
               className="contact-icon2"
             />
-            <span>+375 29 859 1644</span>
+            <span>+375 33 639 3042</span>
           </div>
         </div>
         <div className="contacts-image">

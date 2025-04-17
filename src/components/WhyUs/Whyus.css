@@ -26,11 +26,11 @@
     align-items: center;
     justify-content: flex-start; /* Выравниваем по левому краю */
     gap: 20px;
-    max-width: 1300px;
+    max-width: 1600px;
     margin-left: 0; /* Прижимаем контейнер к левому краю */
     text-align: left; /* Выравниваем текст влево */
-    margin-top: -9%;
-    margin-left: 30%;
+    margin-top: -10%;
+    margin-left: 27%;
 }
 
 .why-us-text {
@@ -46,10 +46,23 @@
     color: #1D4594;
 }
 
-/* Стили для SVG */
-.left-svg, .right-svg {
-    height: 20px;
-}
+.why-us-image {
+    max-width: 800px;
+    width: 80%;
+    height: 7.5vw;
+  }
+  
+  .left-svg,
+  .right-svg {
+    height: 30px;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  
+  .left-svg:hover,
+  .right-svg:hover {
+    transform: scale(1.2);
+  }
 
 @media (max-width: 1400px) {
     .why-us-container {

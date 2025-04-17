@@ -1,0 +1,36 @@
+/* Preloader.css */
+.preloader {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1; /* Начинаем с полной видимости */
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+  
+  /* Убираем автоматическую анимацию исчезновения */
+  /* Вместо этого она будет управляться React-состоянием */
+  
+  .preloader.fade-out {
+    animation: fadeOut 0.5s ease-in-out forwards;
+  }
+  
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+  
+  .preloader img {
+    width: 300px;
+    height: auto;
+  }

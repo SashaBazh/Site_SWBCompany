@@ -4,12 +4,19 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 40px 120px;
-  background-color: #FFFFFF;
+  padding: 20px 120px;
+  background-color: rgba(255, 255, 255, 0.8);
   font-family: 'Montserrat', sans-serif;
   font-size: 23px;
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 90%;
+  z-index: 1000;
+  backdrop-filter: blur(20px);
+  transition: background-color 0.3s ease, padding 0.3s ease;
 }
+
 
 .navbar-logo {
   display: flex;
@@ -21,21 +28,21 @@
   height: 50px;
 }
 
-/* Modified to justify content evenly */
-.navbar-content {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex: 1;
-  margin: 0 43px;
-}
-
-/* Modified to be centered */
 .navbar-links-desktop {
   display: flex;
   gap: 43px;
   margin: 0 auto;
 }
+
+.navbar-links-desktop span,
+.mobile-links span,
+.telegram-button-desktop,
+.telegram-button-desktop span,
+.telegram-button-mobile,
+.telegram-button-mobile span {
+  cursor: url('/assets/Cursor/custom-cursor.svg') 4 4, pointer;
+}
+
 
 .navbar-links-desktop a {
   color: #000000;
@@ -48,7 +55,8 @@
   color: #1D4594;
 }
 
-.telegram-button-desktop, .telegram-button-mobile {
+.telegram-button-desktop,
+.telegram-button-mobile {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -69,7 +77,8 @@
   object-fit: contain;
 }
 
-.telegram-button-desktop:hover, .telegram-button-mobile:hover {
+.telegram-button-desktop:hover,
+.telegram-button-mobile:hover {
   background-color: #153a7d;
 }
 
@@ -84,6 +93,7 @@
   width: 27px;
   height: 16px;
 }
+
 .mobile-menu {
   display: none;
   position: fixed;
@@ -91,10 +101,10 @@
   right: -100%;
   width: 100%;
   height: 100vh;
-  background-color: rgba(255, 255, 255, 0.5); /* Полупрозрачный белый фон */
+  background-color: rgba(255, 255, 255, 0.5);
   z-index: 1000;
   transition: right 0.5s ease-in-out;
-  backdrop-filter: blur(10px); /* Размытие фона */
+  backdrop-filter: blur(10px);
 }
 
 .mobile-menu.active {
@@ -110,7 +120,7 @@
   gap: 10px;
   position: relative;
   transition: opacity 0.3s ease-in-out;
-  filter: none; /* Убираем фильтр размытия с содержимого */
+  filter: none;
 }
 
 .close-button {
@@ -154,316 +164,104 @@
   margin-top: 20px;
 }
 
-
 @media screen and (max-width: 1600px) {
-  .navbar {
-    padding: 32px 90px;
-    font-size: 21px;
-  }
-  
-  .navbar-content {
-    margin: 0 32px;
-  }
-  
-  .navbar-links-desktop {
-    gap: 32px;
-  }
-  
-  .telegram-button-desktop, .telegram-button-mobile {
-    height: 62px;
-    width: 185px;
-  }
-  
-  .telegram-icon {
-    width: 62px;
-    height: 62px;
-  }
-  
-  .logo-img {
-    width: 155px;
-    height: 45px;
-  }
+  .navbar { padding: 32px 90px; font-size: 21px; }
+  .navbar-content { margin: 0 32px; }
+  .navbar-links-desktop { gap: 32px; }
+  .telegram-button-desktop, .telegram-button-mobile { height: 62px; width: 185px; }
+  .telegram-icon { width: 62px; height: 62px; }
+  .logo-img { width: 155px; height: 45px; }
 }
 
 @media screen and (max-width: 1500px) {
-  .navbar {
-    padding: 30px 85px;
-    font-size: 20px;
-  }
-  
-  .navbar-content {
-    margin: 0 30px;
-  }
-  
-  .navbar-links-desktop {
-    gap: 30px;
-  }
-  
-  .telegram-button-desktop, .telegram-button-mobile {
-    height: 60px;
-    width: 180px;
-  }
-  
-  .telegram-icon {
-    width: 60px;
-    height: 60px;
-  }
-  
-  .logo-img {
-    width: 150px;
-    height: 43px;
-  }
+  .navbar { padding: 30px 85px; font-size: 20px; }
+  .navbar-content { margin: 0 30px; }
+  .navbar-links-desktop { gap: 30px; }
+  .telegram-button-desktop, .telegram-button-mobile { height: 60px; width: 180px; }
+  .telegram-icon { width: 60px; height: 60px; }
+  .logo-img { width: 150px; height: 43px; }
 }
 
 @media screen and (max-width: 1400px) {
-  .navbar {
-    padding: 30px 80px;
-  }
+  .navbar { padding: 30px 80px; }
 }
 
 @media screen and (max-width: 1300px) {
-  .navbar {
-    padding: 28px 75px;
-    font-size: 19px;
-  }
-  
-  .navbar-content {
-    margin: 0 28px;
-  }
-  
-  .navbar-links-desktop {
-    gap: 28px;
-  }
-  
-  .telegram-button-desktop, .telegram-button-mobile {
-    height: 58px;
-    width: 175px;
-  }
-  
-  .telegram-icon {
-    width: 58px;
-    height: 58px;
-  }
-  
-  .logo-img {
-    width: 145px;
-    height: 42px;
-  }
+  .navbar { padding: 28px 75px; font-size: 19px; }
+  .navbar-content { margin: 0 28px; }
+  .navbar-links-desktop { gap: 28px; }
+  .telegram-button-desktop, .telegram-button-mobile { height: 58px; width: 175px; }
+  .telegram-icon { width: 58px; height: 58px; }
+  .logo-img { width: 145px; height: 42px; }
 }
 
 @media screen and (max-width: 1200px) {
-  .navbar {
-    padding: 25px 70px;
-    font-size: 18px;
-  }
-  
-  .navbar-content {
-    margin: 0 26px;
-  }
-  
-  .navbar-links-desktop {
-    gap: 26px;
-  }
-  
-  .telegram-button-desktop, .telegram-button-mobile {
-    height: 55px;
-    width: 170px;
-  }
-  
-  .telegram-icon {
-    width: 55px;
-    height: 55px;
-  }
-  
-  .logo-img {
-    width: 140px;
-    height: 40px;
-  }
+  .navbar { padding: 25px 70px; font-size: 18px; }
+  .navbar-content { margin: 0 26px; }
+  .navbar-links-desktop { gap: 26px; }
+  .telegram-button-desktop, .telegram-button-mobile { height: 55px; width: 170px; }
+  .telegram-icon { width: 55px; height: 55px; }
+  .logo-img { width: 140px; height: 40px; }
 }
 
 @media screen and (max-width: 1100px) {
-  .navbar {
-    padding: 20px 50px;
-  }
-  
-  .navbar-content {
-    margin: 0 20px;
-  }
-  
-  .navbar-links-desktop {
-    gap: 20px;
-  }
-  
-  .telegram-button-desktop, .telegram-button-mobile {
-    height: 50px;
-    width: 150px;
-  }
-  
-  .telegram-icon {
-    width: 50px;
-    height: 50px;
-  }
-  
-  .logo-img {
-    width: 130px;
-    height: 37px;
-  }
+  .navbar { padding: 20px 50px; }
+  .navbar-content { margin: 0 20px; }
+  .navbar-links-desktop { gap: 20px; }
+  .telegram-button-desktop, .telegram-button-mobile { height: 50px; width: 150px; }
+  .telegram-icon { width: 50px; height: 50px; }
+  .logo-img { width: 130px; height: 37px; }
 }
 
 @media screen and (max-width: 1000px) {
-  .navbar {
-    padding: 18px 45px;
-    font-size: 17px;
-  }
-  
-  .navbar-content {
-    margin: 0 18px;
-  }
-  
-  .navbar-links-desktop {
-    gap: 18px;
-  }
-  
-  .telegram-button-desktop, .telegram-button-mobile {
-    height: 47px;
-    width: 145px;
-  }
-  
-  .telegram-icon {
-    width: 47px;
-    height: 47px;
-  }
-  
-  .logo-img {
-    width: 125px;
-    height: 35px;
-  }
+  .navbar { padding: 18px 45px; font-size: 17px; }
+  .navbar-content { margin: 0 18px; }
+  .navbar-links-desktop { gap: 18px; }
+  .telegram-button-desktop, .telegram-button-mobile { height: 47px; width: 145px; }
+  .telegram-icon { width: 47px; height: 47px; }
+  .logo-img { width: 125px; height: 35px; }
 }
 
 @media screen and (max-width: 900px) {
-  .navbar {
-    padding: 15px 30px;
-  }
-  
-  .navbar-links-desktop, .telegram-button-desktop {
-    display: none;
-  }
-  
-  .mobile-menu-button {
-    display: flex;
-  }
-  
-  .mobile-menu {
-    display: block;
-  }
-  
-  .telegram-button-mobile {
-    height: 45px;
-    width: 150px;
-  }
-  
-  .telegram-icon {
-    width: 45px;
-    height: 45px;
-  }
-  
-  .logo-img {
-    width: 110px;
-    height: 32px;
-  }
+  .navbar { padding: 15px 30px; }
+  .navbar-links-desktop, .telegram-button-desktop { display: none; }
+  .mobile-menu-button { display: flex; }
+  .mobile-menu { display: block; }
+  .telegram-button-mobile { height: 45px; width: 150px; }
+  .telegram-icon { width: 45px; height: 45px; }
+  .logo-img { width: 110px; height: 32px; }
 }
 
 @media screen and (max-width: 800px) {
-  .navbar {
-    padding: 12px 25px;
-  }
-  
-  .telegram-button-mobile {
-    height: 42px;
-    width: 140px;
-  }
-  
-  .telegram-button-mobile span {
-    font-size: 15px;
-  }
-  
-  .telegram-icon {
-    width: 42px;
-    height: 42px;
-  }
-  
-  .mobile-links a {
-    font-size: 21px;
-  }
+  .navbar { padding: 12px 25px; }
+  .telegram-button-mobile { height: 42px; width: 140px; }
+  .telegram-button-mobile span { font-size: 15px; }
+  .telegram-icon { width: 42px; height: 42px; }
+  .mobile-links a { font-size: 21px; }
 }
 
 @media screen and (max-width: 700px) {
-  .navbar {
-    padding: 10px 20px;
-    font-size: 16px;
-  }
-  
-  .telegram-button-mobile {
-    height: 40px;
-    width: 130px;
-  }
-  
-  .telegram-button-mobile span {
-    font-size: 14px;
-  }
-  
-  .telegram-icon {
-    width: 40px;
-    height: 40px;
-  }
-  
-  .mobile-links a {
-    font-size: 19px;
-  }
+  .navbar { padding: 10px 20px; font-size: 16px; }
+  .telegram-button-mobile { height: 40px; width: 130px; }
+  .telegram-button-mobile span { font-size: 14px; }
+  .telegram-icon { width: 40px; height: 40px; }
+  .mobile-links a { font-size: 19px; }
 }
 
 @media screen and (max-width: 600px) {
-  .mobile-links a {
-    font-size: 18px;
-  }
+  .mobile-links a { font-size: 18px; }
 }
 
 @media screen and (max-width: 500px) {
-  .navbar {
-    padding: 8px 18px;
-    font-size: 14px;
-  }
-  
-  .telegram-button-mobile {
-    height: 38px;
-    width: 120px;
-  }
-  
-  .telegram-button-mobile span {
-    font-size: 12px;
-  }
-  
-  .telegram-icon {
-    width: 38px;
-    height: 38px;
-  }
-  
-  .mobile-links a {
-    font-size: 16px;
-  }
+  .navbar { padding: 8px 18px; font-size: 14px; }
+  .telegram-button-mobile { height: 38px; width: 120px; }
+  .telegram-button-mobile span { font-size: 12px; }
+  .telegram-icon { width: 38px; height: 38px; }
+  .mobile-links a { font-size: 16px; }
 }
 
 @media screen and (max-width: 480px) {
-  .navbar {
-    padding: 10px 15px;
-  }
-  
-  .telegram-button-mobile span {
-    font-size: 12px;
-  }
-  
-  .telegram-icon {
-    width: 36px;
-    height: 36px;
-  }
+  .navbar { padding: 10px 15px; }
+  .telegram-button-mobile span { font-size: 12px; }
+  .telegram-icon { width: 36px; height: 36px; }
 }

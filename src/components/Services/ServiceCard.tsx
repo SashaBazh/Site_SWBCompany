@@ -1,13 +1,12 @@
 import React from "react";
 import "./ServiceCard.css";
 
-// Определение интерфейса для пропсов
 interface ServiceCardProps {
   title: string;
   items: string[];
   price: string;
   days: string;
-  backgroundImage?: string; // URL изображения фона
+  backgroundImage?: string;
 }
 
 const ServiceCard: React.FC<ServiceCardProps> = ({
@@ -16,12 +15,10 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
     price,
     days,
   }) => {
-    // Разбиваем price на "ОТ" и число
     const priceMatch = price.match(/(ОТ)\s*(\d+\$)/);
     const pricePrefix = priceMatch ? priceMatch[1] : "";
     const priceValue = priceMatch ? priceMatch[2] : price;
   
-    // Разбиваем days на диапазон и слово "дней"
     const daysMatch = days.match(/(\d+-\d+)\s*(дней)/);
     const daysRange = daysMatch ? daysMatch[1] : days;
     const daysText = daysMatch ? daysMatch[2] : "";
