@@ -20,7 +20,7 @@ const Guarantee: React.FC = () => {
   }, []);
 
   return (
-    <div className="guarantee">
+    <section id="about" className="guarantee">
       <img src={gifSrc} alt="Foreground Animation" className="foreground-gif" />
       <div className="centered-text-block">
         <h1>Точные решения. Измеримый рост. Никаких компромиссов.</h1>
@@ -29,7 +29,7 @@ const Guarantee: React.FC = () => {
           Мы не просто пишем код, мы создаем инструменты, которые помогают вашему бизнесу расти.
         </p>
       </div>
-    </div>
+    </section>
   );
 };
 

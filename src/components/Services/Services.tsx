@@ -114,7 +114,7 @@ const Services: React.FC = () => {
   const secondRow = services.slice(3, 6);
 
   return (
-    <div className="services-container">
+    <div className="services-container" id="services">
       <h2 className="services-title">Услуги</h2>
       <div className="services-rows">
         <div className="services-scroll">

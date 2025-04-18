@@ -37,7 +37,7 @@ const Reviews = () => {
   return (
     <>
     <h2 className="reviews-titleh2">Отзывы</h2>
-    <div className="reviews-container">
+    <div className="reviews-container" id="reviews">
       {/* Левая часть с отзывами */}
       <div className="reviews-box">
         <div className="reviews-list">

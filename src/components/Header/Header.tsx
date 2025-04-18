@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import "./Header.css";
 
 const Header: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const headerRef = useRef<HTMLDivElement>(null);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -13,15 +14,25 @@ const Header: React.FC = () => {
   };
 
   const scrollToSection = (id: string) => {
-    const section = document.getElementById(id);
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
-      closeMenu();
+    closeMenu();
+    const element = document.getElementById(id);
+    if (element && headerRef.current) {
+      const headerHeight = headerRef.current.offsetHeight;
+      const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+      
+      window.scrollTo({
+        top: elementPosition - headerHeight,
+        behavior: 'smooth'
+      });
+      
+      window.history.replaceState(null, '', `#${id}`);
     }
   };
+  
+  
 
   return (
-    <nav className="navbar">
+    <nav className="navbar" ref={headerRef}>
       <div className="navbar-logo">
         <img src="/assets/Icons/logo.svg" alt="Logo" className="logo-img" />
       </div>

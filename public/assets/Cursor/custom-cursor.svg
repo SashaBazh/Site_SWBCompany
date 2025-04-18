@@ -1,9 +1,9 @@
-<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<rect width="30" height="30" fill="url(#pattern0_479_7)"/>
-<defs>
-<pattern id="pattern0_479_7" patternContentUnits="objectBoundingBox" width="1" height="1">
-<use xlink:href="#image0_479_7" transform="scale(0.0333333)"/>
-</pattern>
-<image id="image0_479_7" width="30" height="30" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAABEElEQVR4nO3UMUoDURAG4D2ClRaZ/4ngDTxAmpmgCPYeRKwEbyDJP+YOtoKVpZ0nsDYiCAoq2Fio7CNplmjIvt0XkP1h2v3mDTNbFF3mJOj5PowPUJ/0bLRX5ArUJzD/jqW8zwfbFJ1WB7cWdKNe1ahDrrtGBa7edWuNoAovaATKA1E+JjeCRXClxPjZyJ8OS8KNnR862BoadbDRFoxXUL7HxVDewcgwGO+0OmoYb3/fUL9uDRblJYxfqUCtrZaBb4tyCOVHVniWDRuvxwZyw7ME5fFK4DIwnqaiYnyNH1s2Yn6SsnhivKgFR1z9EOovNeDn3u5QasNlNvtna2J+JMYbUT79+Ur1t/KlyWjxn/IDVfyS0jt+uNkAAAAASUVORK5CYII="/>
-</defs>
+<svg width="5" height="5" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <rect width="15" height="15" fill="url(#pattern0_479_7)"/>
+  <defs>
+    <pattern id="pattern0_479_7" patternContentUnits="objectBoundingBox" width="1" height="1">
+      <use xlink:href="#image0_479_7" transform="scale(0.0333333)"/>
+    </pattern>
+    <image id="image0_479_7" width="15" height="15" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAABEElEQVR4nO3UMUoDURAG4D2ClRaZ/4ngDTxAmpmgCPYeRKwEbyDJP+YOtoKVpZ0nsDYiCAoq2Fio7CNplmjIvt0XkP1h2v3mDTNbFF3mJOj5PowPUJ/0bLRX5ArUJzD/jqW8zwfbFJ1WB7cWdKNe1ahDrrtGBa7edWuNoAovaATKA1E+JjeCRXClxPjZyJ8OS8KNnR862BoadbDRFoxXUL7HxVDewcgwGO+0OmoYb3/fUL9uDRblJYxfqUCtrZaBb4tyCOVHVniWDRuvxwZyw7ME5fFK4DIwnqaiYnyNH1s2Yn6SsnhivKgFR1z9EOovNeDn3u5QasNlNvtna2J+JMYbUT79+Ur1t/KlyWjxn/IDVfyS0jt+uNkAAAAASUVORK5CYII="/>
+  </defs>
 </svg>

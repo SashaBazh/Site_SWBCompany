@@ -38,7 +38,7 @@ const Advantages: React.FC = () => {
   ];
 
   return (
-    <div className="advantages-container">
+    <div className="advantages-container" id="advantages">
       <h2 className="advantages-title">Наши преимущества</h2>
       <div className="advantages-list">
         {advantages.map((advantage, index) => (

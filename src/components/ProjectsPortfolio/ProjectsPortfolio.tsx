@@ -34,7 +34,7 @@ const ProjectsPortfolio: React.FC = () => {
   return (
     <>
       <h2 className="portfolio-titleh2">Портфолио</h2>
-      <div className="portfolio-wrapper">
+      <div className="portfolio-wrapper" id="portfolio">
         <div className="portfolio-container">
           {projects.map((project, index) => (
             <div key={index} className="portfolio-box">

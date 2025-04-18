@@ -21,7 +21,7 @@
 }
 
 .foreground-gif {
-  width: 90%;
+  width: 95%;
   margin: 0 auto;
 }
 
@@ -54,15 +54,11 @@
 }
 
 @media (max-width: 1800px) {
-    .guarantee { margin-top: 7%;}
+    .guarantee { margin-top: 6%;}
 }
 
 @media (max-width: 1600px) {
     .guarantee { margin-top: 8%;}
-}
-
-@media (max-width: 1600px) {
-    .guarantee { margin-top: 9%;}
 }
 
 @media (max-width: 900px) {

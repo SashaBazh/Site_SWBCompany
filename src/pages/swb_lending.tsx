@@ -44,21 +44,18 @@ export const SwbLending = () => {
 
   return (
     <>
-      {loading ? (
-        <Preloader />
-      ) : (
-        <>
-          <Header />
-          <Guarantee />
-          <WhyUs />
-          <Advantages />
-          <Services />
-          <ProjectsPortfolio />
-          <Reviews />
-          <Contacts />
-          <Footer />
-        </>
-      )}
+      <Header />
+      <Guarantee />
+      <WhyUs />
+      <Advantages />
+      <Services />
+      <ProjectsPortfolio />
+      <Reviews />
+      <Contacts />
+      <Footer />
+  
+      {loading && <Preloader />} {/* просто поверх остальных */}
     </>
   );
+  
 };

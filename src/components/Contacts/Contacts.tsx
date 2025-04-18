@@ -4,7 +4,7 @@ const Contacts = () => {
   return (
     <>
       <h2 className="contacts-title">Контакты</h2>
-      <div className="contacts-container">
+      <div className="contacts-container" id="contacts">
         <div className="contacts-info">
           <div className="contact-item">
             <img
