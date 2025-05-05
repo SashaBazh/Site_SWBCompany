@@ -1,16 +1,16 @@
 import React, { useState, useEffect } from "react";
 import "./Guarantee.css";
+import gifDesktop from "../../../public/assets/gif/gif_desktop.gif";
+import gifMobile from "../../../public/assets/gif/gif_mobile.gif";
+
 
 const Guarantee: React.FC = () => {
   const [gifSrc, setGifSrc] = useState("./assets/gif/Union.gif");
 
   useEffect(() => {
     const updateGif = () => {
-      if (window.innerWidth <= 431) {
-        setGifSrc("./assets/gif/gif_mobile.gif");
-      } else {
-        setGifSrc("./assets/gif/gif_desktop.gif");
-      }
+      setGifSrc(window.innerWidth <= 431 ? gifMobile : gifDesktop);
+
     };
 
     updateGif();
